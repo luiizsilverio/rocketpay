@@ -70,3 +70,18 @@ const cardNumberPattern = {
 }
 
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern);
+
+const cardHolder = document.querySelector('#card-holder');
+
+cardHolder.addEventListener('input', (ev) => {
+  const ccHolder = document.querySelector('.cc-holder .value');
+  ccHolder.innerText = ev.target.value || "FULANO DA SILVA";
+
+})
+
+document.querySelector("form").addEventListener("submit", (ev) => {
+  ev.preventDefault();
+
+});
+
+// 5899 1622 4086 9462 CVC 301 08/26
