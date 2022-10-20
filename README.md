@@ -1,7 +1,7 @@
-<h1 align="center"> Explorer Lab #01 </h1>
+<h1 align="center"> Rocket-Pay 💳</h1>
 
 <p align="center">
-Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
+Projeto desenvolvido em Javascript durante o Evento Explorer Lab #01,  promovido pela Rocketseat.
 </p>
 
 <p align="center">
@@ -26,18 +26,23 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
-- JavaScript e JSON
-- [Node e NPM](https://nodejs.org/)
+- JavaScript
 - [Vite](https://vitejs.dev/)
 - [iMask](https://imask.js.org)
+<br />
+<br />
 
 ## 💻 Projeto
 
 O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM.
+<br />
+<br />
 
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/gpqavL469k0pPUGOmAQEM9/Explorer-Lab-%2301/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+<br />
+<br />
 
 ## :memo: Licença
 
@@ -45,4 +50,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by Luiiz

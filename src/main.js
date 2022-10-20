@@ -19,7 +19,7 @@ function setCardType(type) {
 
 setCardType("default")
 
-window.setCardType = setCardType;
+// window.setCardType = setCardType;
 
 const securityCode = document.getElementById('security-code');
 const securityCodePattern = { mask: "0000" };
@@ -42,7 +42,7 @@ const expirationPattern = {
   }
 };
 
-const expirationMasked = IMask(expirationDate, expirationPattern);
+const expirationDateMasked = IMask(expirationDate, expirationPattern);
 
 const cardNumber = document.getElementById('card-number');
 const cardNumberPattern = {
@@ -76,12 +76,42 @@ const cardHolder = document.querySelector('#card-holder');
 cardHolder.addEventListener('input', (ev) => {
   const ccHolder = document.querySelector('.cc-holder .value');
   ccHolder.innerText = ev.target.value || "FULANO DA SILVA";
-
 })
 
 document.querySelector("form").addEventListener("submit", (ev) => {
   ev.preventDefault();
-
 });
 
-// 5899 1622 4086 9462 CVC 301 08/26
+securityCodeMasked.on('accept', () => (
+  updateSecurityCode(securityCodeMasked.value)
+));
+
+function updateSecurityCode(code) {
+  const ccSecurity = document.querySelector('.cc-security .value');
+  ccSecurity.innerText = code || "123";
+}
+
+cardNumberMasked.on('accept', () => {
+  const cardType = cardNumberMasked.masked.currentMask.cardtype;
+  setCardType(cardType);
+  updateCardNumber(cardNumberMasked.value)
+});
+
+function updateCardNumber(number) {
+  const ccNumber = document.querySelector('.cc-number');
+  ccNumber.innerText = number || "1234 5678 9012 3456";
+}
+
+expirationDateMasked.on('accept', () => {
+  updateExpirationdate(expirationDateMasked.value);
+});
+
+function updateExpirationdate(date) {
+  const ccExpiration = document.querySelector('.cc-extra .value');
+  ccExpiration.innerText = date || "02/32";
+}
+
+
+
+// mastercard começa com 5
+// visa começa com 4
